@@ -1,7 +1,9 @@
 <template>
      <div>
          <div class="header">
-             <div class="headerLeft">天气</div>
+             <div class="headerLeft">
+               <iframe src="https://tianqiapi.com/api.php?style=ta&skin=pitaya&color=fff&fontsize=16&city=象山" frameborder="0"></iframe>
+             </div>
              <div class="back"  @click="goUrl('/','首页')" ></div>
              <div class="headerRight">
                  <div class="sort" :class="active=='/development'?'active':''" @click="goUrl('/development','产业发展')">产业发展</div>
@@ -47,6 +49,7 @@ export default {
     }
     .back {width: 30%;height:85px;position: absolute;left: 30%;top:0;cursor: pointer;}
     .headerRight {float:right;margin-right: 40px;}
+    .headerLeft {width: 30%;}
     .headerRight div {
         float:left;
         width:125px;height:34px;

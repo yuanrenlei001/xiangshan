@@ -84,10 +84,54 @@
                   </el-col>
                   <el-col :span="24" style="color: #fff;">
                       <el-col :span="10"><div id="mains" style="width: 100%;height: 200px;margin-top: 10px;" ref="main"></div></el-col>
-                      <el-col :span="14">2</el-col>
+                      <el-col :span="13" style="position: relative;top:45px;">
+                        <div class="ncIcon ncIcon01"><span>一产业</span><span>14.5%</span></div>
+                        <div class="ncIcon ncIcon02"><span>二产业</span><span>41.7%</span></div>
+                        <div class="ncIcon ncIcon03"><span>三产业</span><span>43.8%</span></div>
+                      </el-col>
                   </el-col>
               </el-row>
           </div>
+        <div class="indexLeftTitle">美丽乡村</div>
+        <div class="indexRight02">
+          <div style="height:90px;">
+            <div class="indexRight02Left"  style="line-height: 90px;"><span><img src="@/assets/index/xc01.png" alt=""></span> <span>省级新时代美丽乡村</span> <span><img src="@/assets/index/xcicon02.png" alt=""></span></div>
+            <div class="indexRight02Right">
+              <div><span>精品村</span> <span>41 <i>个</i></span></div>
+              <div><span>达标村</span> <span>123 <i>个</i></span></div>
+            </div>
+          </div>
+          <div style="height:140px;">
+            <div class="indexRight02Left"  style="line-height: 140px;"><span><img src="@/assets/index/xc02.png" alt=""></span> <span>市美丽乡村</span> <span><img src="@/assets/index/xcicon02.png" alt=""></span></div>
+            <div class="indexRight02Right">
+              <div><span>示范镇</span> <span>6 <i>个</i></span> <span>+1</span></div>
+              <div><span>示范村</span> <span>20 <i>个</i></span> <span>+4</span></div>
+              <div><span>合格村</span> <span>207 <i>个</i></span></div>
+              <div><span>风景线</span> <span>2 <i>条</i></span></div>
+            </div>
+          </div>
+          <div style="height:60px;">
+            <div class="indexRight02Left"  style="line-height: 60px;"><span><img src="@/assets/index/xc03.png" alt=""></span> <span>县级特色村</span> <span><img src="@/assets/index/xcicon02.png" alt=""></span></div>
+            <div class="indexRight02Right">
+              <div><span></span> <span>52 <i>个</i></span> <span>+10</span></div>
+            </div>
+          </div>
+          <div style="height:60px;">
+            <div class="indexRight02Left"  style="line-height: 60px;"><span><img src="@/assets/index/xc04.png" alt=""></span> <span>省级森林城镇</span> <span><img src="@/assets/index/xcicon02.png" alt=""></span></div>
+            <div class="indexRight02Right">
+              <div><span></span> <span>11 <i>个</i></span> <span>+1</span></div>
+            </div>
+          </div>
+          <div style="height:140px;">
+            <div class="indexRight02Left"  style="line-height: 140px;"><span><img src="@/assets/index/xc05.png" alt=""></span> <span>人居环境</span> <span><img src="@/assets/index/xcicon02.png" alt=""></span></div>
+            <div class="indexRight02Right">
+              <div><span>农村卫生厕所数量</span> <span>214 <i>个</i></span></div>
+              <div><span>文化礼堂数量</span> <span>65 <i>个</i></span></div>
+              <div><span>污水处理率</span> <span>100 <i>%</i></span></div>
+              <div><span>垃圾分类覆盖率</span> <span>100 <i>%</i></span></div>
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 </template>
@@ -114,7 +158,6 @@ export default {
         drawLines1(data){
             let myChart = echarts.init(this.$refs.main);
             let option = {
-                    backgroundColor: '#071729',
                     title:[
                         {
                             text: 'GDP',
@@ -124,7 +167,7 @@ export default {
                             },
                             itemGap: 20,
                             left: 'center',
-                            top: '42%'
+                            top: '35%'
                         },
                         {
                             text: '各产业',
@@ -134,7 +177,7 @@ export default {
                             },
                             itemGap: 20,
                             left: 'center',
-                            top: '47%'
+                            top: '45%'
                         },
                         {
                             text: '比重',
@@ -144,7 +187,7 @@ export default {
                             },
                             itemGap: 20,
                             left: 'center',
-                            top: '52%'
+                            top: '55%'
                         }
                     ],
                     tooltip: {
@@ -391,7 +434,7 @@ export default {
     .indexLeftMain04 span:first-child {position: absolute;left:0;}
     .indexLeftMain04 span:last-child {position: absolute;right:0;top:0;}
     .indexLeftMain04>>>.el-progress-bar__outer {background-color: rgba(255,255,255,.2);}
-    .indexRight01 {background: rgba(0,0,0,.3);width: 90%;margin-left: 10%;padding-top: 25px;}
+    .indexRight01 {background: rgba(0,0,0,.3);width: 90%;padding-left: 5%;padding-top: 25px;margin-left: 5%;}
     .indexRight01 img {width: 100%;height:100%;}
     .indexRight01text01 {font-size: 14px;color: #8b9cdd;}
     .indexRight01text02 {font-size: 26px;color: #fff;}
@@ -399,5 +442,57 @@ export default {
     .indexRight01text04 {font-size: 18px;color: #26bfff;}
     .indexRight01text03 span {font-size: 12px;color: #8b9cdd;}
     .indexRight01text04 span {font-size: 12px;color: #26bfff;}
-
+    .ncIcon {width: 100%;position: relative;line-height: 25px;margin-bottom: 20px;}
+    .ncIcon01:before{
+      content: '';
+      width:100%;height:21px;position: absolute;bottom:-5px;left:0;
+      background-image: url("../assets/index/diyi.png");
+      background-repeat: no-repeat;
+      background-size:100% 21px;
+    }
+    .ncIcon02:before{
+      content: '';
+      width:100%;height:21px;position: absolute;bottom:-5px;left:0;
+      background-image: url("../assets/index/dier.png");
+      background-repeat: no-repeat;
+      background-size:100% 21px;
+    }
+    .ncIcon03:before{
+      content: '';
+      width:100%;height:21px;position: absolute;bottom:-5px;left:0;
+      background-image: url("../assets/index/disan.png");
+      background-repeat: no-repeat;
+      background-size:100% 21px;
+    }
+    .ncIcon span:first-child {margin-left: 26px;font-size: 16px;color: #8b9cdd;}
+    .ncIcon span:last-child {font-size: 24px;float:right;color: #fff;}
+    .indexRight02 {background: rgba(0,0,0,.3);width: 90%;padding-left: 5%;margin-left: 5%;}
+    .indexRight02 i {font-style: normal;}
+    .indexRight02>div {padding:0 20px;position: relative;}
+    .indexRight02>div:before{
+      content: '';
+      width:100%;height:18px;position: absolute;bottom:0;left:0;
+      background-image: url("../assets/index/xcicon03.png");
+      background-repeat: no-repeat;
+      background-size:100% 18px;
+    }
+    .indexRight02Left {float:left;margin-left: -15px;height: 100%;}
+    .indexRight02Left span {display: inline-block;color: #3baeff;font-size: 16px;}
+    .indexRight02Left span:nth-child(1) {width:48px;height:100%;}
+    .indexRight02Left span:nth-child(1) img  {vertical-align: middle;}
+    .indexRight02Left span:nth-child(3) {width:113px;height:100%;}
+    .indexRight02Left span:nth-child(3) img {vertical-align: middle;}
+    .indexRight02Right {position: absolute;top:20px;right:24px;}
+    .indexRight02Right>div {position: relative;line-height: 25px;}
+    .indexRight02Right>div:before{
+      content: '';
+      width:9px;height:9px;position: absolute;top:50%;left:-15px;
+      background-image: url("../assets/index/xcicon01.png");
+      background-repeat: no-repeat;
+      background-size:9px 9px;
+    }
+    .indexRight02Right span:nth-child(1) {font-size: 14px;color: #8b9cdd;}
+    .indexRight02Right span:nth-child(2) {font-size: 20px;color: #fff;margin: 0 15px;}
+    .indexRight02Right span:nth-child(2) i {font-size: 12px;}
+    .indexRight02Right span:nth-child(3) {font-size: 14px;color: #ff5757;}
 </style>
